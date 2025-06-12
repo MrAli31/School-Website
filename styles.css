@@ -1154,3 +1154,92 @@ a {
 #home .circle-lg.teal{top:60px;left:40px;}
 #home .circle-md.yellow{top:200px;right:350px;}
 #home .circle-sm.pink{bottom:140px;right:90px;}
+
+/* How It Works Section Styles */
+#how-it-works.new-layout {
+    background: #F1F5F9;
+    padding: 4rem 0;
+}
+#how-it-works .howit-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    align-items: start;
+}
+#how-it-works .howit-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+#how-it-works .howit-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1F2937;
+    line-height: 1.2;
+}
+#how-it-works .howit-desc {
+    font-size: 1rem;
+    color: #4B5563;
+    max-width: 360px;
+}
+#how-it-works .howit-btn {
+    background: #FF5B2E;
+    color: #fff;
+    padding: 0.75rem 1.8rem;
+    border: none;
+    border-radius: 999px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .2s, transform .2s;
+    align-self: start;
+}
+#how-it-works .howit-btn:hover {
+    background: #FF8E53;
+    transform: translateY(-2px);
+}
+#how-it-works .howit-right {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 1.5rem;
+}
+#how-it-works .howit-card-main {
+    background: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(24,39,75,0.07);
+}
+#how-it-works .howit-mainimg-card {
+    width: 100%;
+    display: block;
+}
+#how-it-works .howit-mini-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+#how-it-works .howit-card {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 18px rgba(24,39,75,0.07);
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#how-it-works .howit-card h3,
+#how-it-works .howit-card h4 {
+    margin-bottom: 0.5rem;
+}
+#how-it-works .howit-card p {
+    font-size: 0.95rem;
+    color: inherit;
+}
+@media (max-width: 768px) {
+    #how-it-works .howit-grid {
+        grid-template-columns: 1fr;
+    }
+}
