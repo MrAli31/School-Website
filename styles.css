@@ -1243,3 +1243,87 @@ a {
         grid-template-columns: 1fr;
     }
 }
+
+/* Enrollment Form Styles */
+.enrollment-form {
+    padding: 60px 20px;
+    background: var(--background);
+}
+.enrollment-form .section-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.enrollment-form form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1.5rem;
+}
+.enrollment-form .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+.enrollment-form .form-group input,
+.enrollment-form .form-group select,
+.enrollment-form .form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 0.5rem;
+    font-family: inherit;
+}
+.enrollment-form button[type="submit"] {
+    justify-self: center;
+    padding: 0.75rem 2rem;
+}
+@media (max-width: 768px) {
+    .enrollment-form form {
+        width: 100%;
+        padding: 0 1rem;
+    }
+}
+
+/* Enrollment Form Enhancements */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.enrollment-form {
+  animation: fadeInUp 1s ease-out;
+}
+.enrollment-form form .form-group {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+.enrollment-form form .form-group:nth-child(1) { animation-delay: 0.2s; }
+.enrollment-form form .form-group:nth-child(2) { animation-delay: 0.4s; }
+.enrollment-form form .form-group:nth-child(3) { animation-delay: 0.6s; }
+.enrollment-form form .form-group:nth-child(4) { animation-delay: 0.8s; }
+.enrollment-form form .form-group:nth-child(5) { animation-delay: 1s; }
+.enrollment-form form .form-group:nth-child(6) { animation-delay: 1.2s; }
+.enrollment-form form .form-group:nth-child(7) { animation-delay: 1.4s; }
+.enrollment-form .form-group input:focus,
+.enrollment-form .form-group select:focus,
+.enrollment-form .form-group textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.3);
+  outline: none;
+}
+.enrollment-form button[type="submit"] {
+  background: var(--primary-color);
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.enrollment-form button[type="submit"]:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.enrollment-form .section-header h2 {
+  font-size: 2rem;
+  animation: fadeInUp 0.8s ease-out;
+}
+@media (max-width: 768px) {
+  .enrollment-form .section-header h2 { font-size: 1.75rem; }
+}

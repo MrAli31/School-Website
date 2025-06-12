@@ -161,6 +161,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // Simple form submission for enrollment form
+    const enrollForm = document.getElementById('enrollForm');
+    if (enrollForm) {
+        enrollForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Show confirmation popup
+            alert("Thank you! We’ll contact you soon.");
+            this.reset();
+        });
+    }
+    
     // Initialize AOS (Animate On Scroll) for elements
     // This is a simple implementation - you might want to use the AOS library for more complex animations
     const initAOS = () => {
