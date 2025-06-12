@@ -33,6 +33,7 @@
 
 html {
     scroll-behavior: smooth;
+    height: 100%;
 }
 
 body {
@@ -41,6 +42,13 @@ body {
     color: var(--text-color);
     background-color: var(--background);
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto;
 }
 
 /* Typography */
@@ -891,30 +899,62 @@ a {
 
 .footer-container {
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 2.5rem;
+    justify-content: space-between;
+    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1.2rem 0 0.5rem 0;
+    padding: 1.2rem 2.5rem 0.5rem 2.5rem;
+    gap: 0;
+    width: 100%;
 }
 
 .footer-col {
-    flex: 0 0 140px;
-    max-width: 140px;
-    min-width: 110px;
-    margin: 0 0.6rem;
+    flex: 1 1 0;
+    max-width: 220px;
+    min-width: 160px;
+    margin: 0 1.2rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    row-gap: 0.6rem;
+    row-gap: 0.7rem;
     padding: 0;
+    justify-content: center;
 }
 .footer-col.about {
-    flex: 0 0 170px;
-    max-width: 170px;
-    min-width: 120px;
+    flex: 1 1 0;
+    max-width: 220px;
+    min-width: 160px;
     padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.2rem;
+}
+.footer-about-subscribe {
+    margin-left: 0;
+}
+.footer-about-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+.footer-about-subscribe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 180px;
+}
+@media (max-width: 1024px) {
+    .footer-col.about {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .footer-about-subscribe {
+        min-width: 0;
+        width: 100%;
+    }
 }
 
 .footer-col.courses {
@@ -939,8 +979,23 @@ a {
 .footer-logo-row {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.7rem;
+    white-space: nowrap;
     margin-bottom: 0.3rem;
+}
+.footer-logo-icon, .footer-logo-text {
+    white-space: nowrap;
+    display: inline-block;
+    font-size: 1.1rem;
+}
+@media (max-width: 500px) {
+    .footer-logo-row {
+        font-size: 0.95rem;
+        gap: 0.5rem;
+    }
+    .footer-logo-icon, .footer-logo-text {
+        font-size: 0.95rem;
+    }
 }
 .footer-logo-icon {
     display: inline-flex;
