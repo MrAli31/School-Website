@@ -29,7 +29,7 @@
             <div class="section-header">
                 <h2>Enrollment Form</h2>
             </div>
-            <form id="enrollForm">
+            <form id="enrollForm" action="submit.php" method="POST">
                 <div class="form-group">
                     <label for="studentName">Full Name (Student)</label>
                     <input type="text" id="studentName" name="studentName" required>
@@ -43,8 +43,12 @@
                     <input type="text" id="parentName" name="parentName" required>
                 </div>
                 <div class="form-group">
-                    <label for="contactInfo">Contact Info (Phone + Email)</label>
-                    <input type="text" id="contactInfo" name="contactInfo" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" id="phone" name="phone" required>
                 </div>
                 <div class="form-group">
                     <label for="courseLevel">Preferred Course Level</label>
